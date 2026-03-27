@@ -1,0 +1,10 @@
+node_modules
+dist
+build
+downloads
+.session
+.pnpm-store
+.wxt
+src-tauri/target
+pnpm-lock.yaml
+.tmp-panopto-state.json

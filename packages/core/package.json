@@ -1,0 +1,49 @@
+{
+  "name": "@monash-moodle-downloader/core",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit"
+  },
+  "main": "./dist/index.js",
+  "exports": {
+    ".": {
+      "types": "./src/index.ts",
+      "default": "./dist/index.js"
+    },
+    "./auth-service": {
+      "types": "./src/auth/auth-service.ts",
+      "default": "./dist/auth/auth-service.js"
+    },
+    "./config": {
+      "types": "./src/config.ts",
+      "default": "./dist/config.js"
+    },
+    "./course-service": {
+      "types": "./src/course/course-service.ts",
+      "default": "./dist/course/course-service.js"
+    },
+    "./download-service": {
+      "types": "./src/download/download-service.ts",
+      "default": "./dist/download/download-service.js"
+    },
+    "./env": {
+      "types": "./src/env.ts",
+      "default": "./dist/env.js"
+    },
+    "./subtitle-translate-service": {
+      "types": "./src/subtitles/subtitle-translate-service.ts",
+      "default": "./dist/subtitles/subtitle-translate-service.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "dependencies": {
+    "@monash-moodle-downloader/shared": "workspace:*",
+    "cheerio": "^1.2.0",
+    "playwright": "^1.58.2"
+  }
+}
